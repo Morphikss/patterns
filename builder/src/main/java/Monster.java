@@ -1,5 +1,3 @@
-
-
 public class Monster{
     private int hp;
     private int mana;
