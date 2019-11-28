@@ -11,7 +11,14 @@ public class Adapter {
         dragon1.fly();
         dragon1.emblaze();
 
-        dragonAdapter.smash();
         dragonAdapter.walkForward();
+        dragonAdapter.smash();
+
+        Monster monsterr = dragonAdapter;
+        monsterr.smash();
+        monsterr.walkForward();
+        monsterr = troll1;
+        monsterr.smash();
+        monsterr.walkForward();
     }
 }
