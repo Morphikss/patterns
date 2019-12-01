@@ -1,6 +1,10 @@
-public class Decorator {
-    public static void main(String[] args) {
-        Enemy enemy = new Enemy(5);
+import org.junit.Test;
+
+
+public class DecoratorTest {
+    @Test
+    public void test2(){
+        Enemy enemy = new Enemy(10);
         Monster troll = new Troll();
 
         troll = new BuffDecorator(troll, 5);
