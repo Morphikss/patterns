@@ -15,6 +15,6 @@ public class BuffDecorator implements Monster{
 
     @Override
     public void walkForward() {
-
+        System.out.println("walk 5 meters and regenerate hp");
     }
 }

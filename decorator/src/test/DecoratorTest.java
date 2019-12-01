@@ -1,4 +1,6 @@
-import org.junit.Test;
+import org.testng.annotations.Test;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 
 public class DecoratorTest {
@@ -9,6 +11,6 @@ public class DecoratorTest {
 
         troll = new BuffDecorator(troll, 5);
         troll.smash(enemy);
-        System.out.println(enemy.Health());
+        assertEquals("Decorator with bonus damage works and dealt 5 more damage", 0, enemy.Health());
     }
 }
