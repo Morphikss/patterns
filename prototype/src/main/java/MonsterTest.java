@@ -1,5 +1,9 @@
-public class Prototype {
-    public static void main(String[] args){
+import org.junit.Test;
+
+
+public class MonsterTest {
+    @Test
+    public void test3(){
         CloneFactory monsterMaker = new CloneFactory();
         Goblin goblin = new Goblin(5);
 
@@ -15,7 +19,5 @@ public class Prototype {
 
         System.out.println(goblin.health());
         System.out.println(clonedGoblin.health());
-
-
     }
 }
