@@ -1,4 +1,4 @@
 public interface Monster {
-    public void smash();
+    public void smash(Enemy enemy);
     public void walkForward();
 }

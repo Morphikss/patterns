@@ -1,24 +1,12 @@
 public class Adapter {
     public static void main(String[] args){
-        Troll troll1 = new Troll();
         Dragon dragon1 = new Dragon();
-
-        Monster dragonAdapter = new DragonAdapter(dragon1);
-
-        troll1.smash();
-        troll1.walkForward();
-
-        dragon1.fly();
-        dragon1.emblaze();
+        Enemy enemy1 = new Enemy(10);
+        Monster dragonAdapter = new MonsterAdapter(dragon1);
 
         dragonAdapter.walkForward();
-        dragonAdapter.smash();
+        dragonAdapter.smash(enemy1);
 
-        Monster monsterr = dragonAdapter;
-        monsterr.smash();
-        monsterr.walkForward();
-        monsterr = troll1;
-        monsterr.smash();
-        monsterr.walkForward();
+        System.out.println(enemy1.Health());
     }
 }

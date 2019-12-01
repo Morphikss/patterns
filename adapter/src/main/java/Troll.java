@@ -1,6 +1,7 @@
 public class Troll implements Monster {
-    public void smash() {
-        System.out.println("Troll smash and dealt 5 damage");
+    @Override
+    public void smash(Enemy enemy) {
+        enemy.DealDamage(5);
     }
 
     public void walkForward() {

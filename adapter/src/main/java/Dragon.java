@@ -1,6 +1,7 @@
 public class Dragon {
-    public void emblaze(){
-        System.out.println("Dragon emblaze and dealt 10 damage");
+    public void emblaze(Enemy enemy) {
+        enemy.DealDamage(10);
+
     }
     public void fly(){
         System.out.println("Dragon fly to next enemy");
