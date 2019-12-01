@@ -1,13 +1,14 @@
 import org.junit.Test;
 
 
-public class MonsterTest {
+public class PrototypeTest {
     @Test
-    public void test3(){
+    public void test1(){
         CloneFactory monsterMaker = new CloneFactory();
         Goblin goblin = new Goblin(5);
 
         Goblin clonedGoblin = (Goblin) monsterMaker.getClone(goblin);
+        AssertNotEquals(0,1);
         System.out.println(goblin);
         System.out.println(clonedGoblin);
 
