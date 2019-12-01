@@ -1,5 +1,5 @@
 import org.junit.Test;
-
+import static org.junit.Assert.assertNotEquals;
 
 public class PrototypeTest {
     @Test
@@ -8,17 +8,10 @@ public class PrototypeTest {
         Goblin goblin = new Goblin(5);
 
         Goblin clonedGoblin = (Goblin) monsterMaker.getClone(goblin);
-        AssertNotEquals(0,1);
-        System.out.println(goblin);
-        System.out.println(clonedGoblin);
+        assertNotEquals(goblin, clonedGoblin);
 
         goblin.changeHealth(2);
-
-        System.out.println("Goblin HashCode: " + System.identityHashCode(System.identityHashCode(goblin)));
-        System.out.println("Clone HashCode: " + System.identityHashCode(System.identityHashCode(clonedGoblin)));
-
-
-        System.out.println(goblin.health());
-        System.out.println(clonedGoblin.health());
+        assertNotEquals(goblin.health(), clonedGoblin.health());
+        assertNotEquals(System.identityHashCode(goblin), System.identityHashCode(clonedGoblin));
     }
 }
