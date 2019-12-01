@@ -1,4 +1,4 @@
-public class bridge {
+public class Bridge {
     public static void main(String[] args) {
         Type american = new AmericanType(new FatDough());
         american.chooseDough();
