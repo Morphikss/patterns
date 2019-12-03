@@ -4,5 +4,5 @@ public interface ClientInterface {
     void increaseBalance(double amount);
     void decreaseBalance(double amount);
     double getBalance();
-
+    boolean isLocked();
 }

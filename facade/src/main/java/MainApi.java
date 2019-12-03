@@ -31,12 +31,16 @@ public class MainApi {
         return receiver.getBalance();
     }
 
-    public void blockAccount(){
+    public boolean isLocked(){
+        return sender.isLocked();
+    }
+
+    public void blockSenderAccount(){
         senderAccount.lock(sender);
     }
 
-    public void openAccount(){
-        senderAccount.unlock(receiver);
+    public void openSenderAccount(){
+        senderAccount.unlock(sender);
     }
 }
 
