@@ -1,4 +1,4 @@
 public interface Balance {
-    void increase();
-    void decrease();
+    void increase(ClientInterface client, double amount);
+    void decrease(ClientInterface client, double amount);
 }

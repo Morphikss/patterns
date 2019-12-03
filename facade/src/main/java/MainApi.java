@@ -1,67 +1,35 @@
 public class MainApi {
-    private Account senderAccount = new SenderAccount();
-    private Account receiverAccount = new ReceiverAccount();
-    private Balance senderBalance = new SenderBalance();
-    private Balance receiverBalance = new ReceiverBalance();
+    private Account senderAccount;
+    private Account receiverAccount;
+    private Balance senderBalance;
+    private Balance receiverBalance;
+    private ClientInterface sender;
+    private ClientInterface receiver;
 
-    public void usualTranfer(){
-        senderAccount.lock();
-        senderBalance.decrease();
-        receiverAccount.lock();
-        receiverBalance.increase();
-        senderAccount.unlock();
-        receiverAccount.unlock();
-
+    public MainApi(double b1, double b2){
+        this.senderAccount = new SenderAccount();
+        this.receiverAccount = new ReceiverAccount();
+        this.senderBalance = new SenderBalance();
+        this.receiverBalance = new ReceiverBalance();
+        this.sender = new Client(b1);
+        this.receiver = new Client(b2);
     }
-    public void ownTranfer(){
-        senderAccount.lock();
-        senderBalance.decrease();
-        senderBalance.increase();
-        senderAccount.unlock();
-
+    public void tranfer(double amount){
+        senderAccount.lock(sender);
+        senderBalance.decrease(sender, amount);
+        receiverAccount.lock(receiver);
+        receiverBalance.increase(receiver, amount);
+        senderAccount.unlock(sender);
+        receiverAccount.unlock(receiver);
     }
+
     public void blockAccount(){
-        senderAccount.lock();
+        senderAccount.lock(sender);
     }
 
     public void openAccount(){
-        senderAccount.unlock();
+        senderAccount.unlock(receiver);
     }
 }
 
 
-//    private Light livingRoomLight = new LivingRoomLight();
-//    private Light hallLight = new HallLight();
-//    private Door mainDoor = new MainDoor();
-//    private Door garageDoor = new GarageDoor();
-//
-//    public void lockHome(){
-//
-//        System.out.println("------ LOCK HOME -----");
-//        livingRoomLight.off();
-//        hallLight.off();
-//        mainDoor.lock();
-//        garageDoor.lock();
-//    }
-//
-//    public void unlockHome(){
-//
-//        System.out.println("------ UNLOCK HOME -----");
-//        hallLight.on();
-//        mainDoor.unlock();
-//        garageDoor.unlock();
-//    }
-//
-//    public void lightOff(){
-//
-//        System.out.println("------ LIGHT OFF -----");
-//        livingRoomLight.off();
-//        hallLight.off();
-//    }
-//
-//    public void lightOn(){
-//
-//        System.out.println("------ LIGHT ON -----");
-//        livingRoomLight.on();
-//        hallLight.on();
-//    }

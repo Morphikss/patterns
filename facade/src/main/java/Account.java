@@ -1,4 +1,4 @@
 public interface Account {
-    void unlock();
-    void lock();
+    void unlock(ClientInterface client);
+    void lock(ClientInterface client);
 }
