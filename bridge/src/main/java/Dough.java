@@ -1,3 +1,3 @@
 public interface Dough {
-    public void chooseDough();
+    public void chooseDough(Stock stock);
 }
