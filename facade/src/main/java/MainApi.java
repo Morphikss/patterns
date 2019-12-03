@@ -23,6 +23,14 @@ public class MainApi {
         receiverAccount.unlock(receiver);
     }
 
+    public double getSenderBalance(){
+        return sender.getBalance();
+    }
+
+    public double getReceiverBalance(){
+        return receiver.getBalance();
+    }
+
     public void blockAccount(){
         senderAccount.lock(sender);
     }

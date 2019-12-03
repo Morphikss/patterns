@@ -3,4 +3,6 @@ public interface ClientInterface {
     void unlockAccount();
     void increaseBalance(double amount);
     void decreaseBalance(double amount);
+    double getBalance();
+
 }
