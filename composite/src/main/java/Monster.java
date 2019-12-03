@@ -1,3 +1,3 @@
 public interface Monster {
-    void smash();
+    void smash(Player player);
 }

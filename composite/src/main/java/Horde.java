@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Combat implements Monster {
-    private Player player;
+public class Horde implements Monster {
     private List<Monster> monsters = new ArrayList<>();
 
     public void addMonster(Monster monster){
@@ -11,12 +10,12 @@ public class Combat implements Monster {
     }
 
     @Override
-    public void smash() {
-        System.out.println("Kompozyt");
+    public void smash(Player player) {
+        System.out.println("Walka");
         if(!monsters.isEmpty()){
             for(Monster monster: monsters ){
                 if(monster instanceof Monster){
-                    monster.smash();
+                    monster.smash(player);
                 }
             }
         }

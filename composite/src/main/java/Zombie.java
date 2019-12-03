@@ -7,7 +7,13 @@ public class Zombie implements Monster {
 
 
     @Override
-    public void smash() {
-        System.out.println("SMASH THEM ALL");
+    public void smash(Player player) {
+        System.out.println(player.getHp());
+        int tmp = player.getHp() - this.attackDamage;
+        System.out.println(tmp);
+        player.setHp(tmp);
+        if(player.getHp() == 0){
+            System.out.println("Player is dead");
+        }
     }
 }
