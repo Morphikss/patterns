@@ -29,8 +29,8 @@ public class ArmyOfTroll implements Monster {
             enemy.crump(this);
         }
         else {
-            System.out.println("Something is wrong!");
-            System.exit(32);
+            System.out.println("Something went terrible wrong!");
+            System.exit(44);
         }
 
     }

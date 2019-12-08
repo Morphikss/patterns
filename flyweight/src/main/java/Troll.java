@@ -5,7 +5,7 @@ public class Troll implements Monster {
     }
 
     public void walkForward() {
-        System.out.println("Troll walk 5 meters forward");
+        System.out.println("Troll walks 5 meters forward");
     }
 }
 
