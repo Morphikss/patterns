@@ -35,6 +35,11 @@ public class MainApi implements IApi{
         return sender.isLocked();
     }
 
+    @Override
+    public boolean isUnwantedAccess() {
+        return false;
+    }
+
     public void blockSenderAccount(){
         senderAccount.lock(sender);
     }

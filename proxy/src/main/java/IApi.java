@@ -3,4 +3,5 @@ public interface IApi {
     double getSenderBalance();
     double getReceiverBalance();
     boolean isLocked();
+    boolean isUnwantedAccess();
 }
