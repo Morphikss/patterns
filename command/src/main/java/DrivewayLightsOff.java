@@ -5,8 +5,4 @@ public class DrivewayLightsOff implements CommanderInterface {
         System.out.println("Driveway lights off");
     }
 
-    @Override
-    public void undo() {
-
-    }
 }

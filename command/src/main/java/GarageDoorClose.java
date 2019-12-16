@@ -5,8 +5,4 @@ public class GarageDoorClose implements CommanderInterface {
         System.out.println("Garage door close");
     }
 
-    @Override
-    public void undo() {
-
-    }
 }

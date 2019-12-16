@@ -5,8 +5,4 @@ public class GateOpen implements CommanderInterface{
         System.out.println("Gate open");
     }
 
-    @Override
-    public void undo() {
-
-    }
 }

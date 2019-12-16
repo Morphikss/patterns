@@ -9,14 +9,12 @@ public class MainApi {
         goingHome.add(new DrivewayLightsOn());
         goingHome.add(new GateOpen());
         goingHome.add(new GarageDoorOpen());
-        goingHome.add(new GateClose());
+        goingHome.add(new DoorOpen());
 
-        goingWork.add(new DrivewayLightsOn());
-        goingWork.add(new GarageDoorOpen());
-        goingWork.add(new GateOpen());
         goingWork.add(new GarageDoorClose());
         goingWork.add(new GateClose());
         goingWork.add(new DrivewayLightsOff());
+        goingWork.add(new DoorClose());
     }
 
     public void comingHome(){
@@ -33,5 +31,9 @@ public class MainApi {
                 command.execute(devices);
             }
         }
+    }
+
+    public DevicesState getDevices(){
+        return devices;
     }
 }

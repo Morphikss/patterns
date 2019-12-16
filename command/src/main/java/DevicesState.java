@@ -2,6 +2,7 @@ public class DevicesState {
     private boolean isGateOpened = false;
     private boolean isDrivewayLightsOn = false;
     private boolean isGarageDoorOpened = false;
+    private boolean isDoorOpened = false;
 
     public boolean isGateOpened() {
         return isGateOpened;
@@ -25,5 +26,13 @@ public class DevicesState {
 
     public void setGarageDoorOpened(boolean garageDoorOpened) {
         isGarageDoorOpened = garageDoorOpened;
+    }
+
+    public boolean isDoorOpened() {
+        return isDoorOpened;
+    }
+
+    public void setDoorOpened(boolean doorOpened) {
+        isDoorOpened = doorOpened;
     }
 }
